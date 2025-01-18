@@ -76,7 +76,7 @@
     <sort>
       <key variable="citation-number"/>
     </sort>
-    <layout prefix="[" suffix="].">
+    <layout suffix=".">
       <text variable="citation-number" suffix=" "/>
       <text macro="author" suffix=". "/>
       <text variable="title" suffix=". "/>
