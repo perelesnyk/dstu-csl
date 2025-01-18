@@ -12,7 +12,7 @@
     <category citation-format="numeric"/>
     <category field="generic-base"/>
     <summary>Citation style according to DSTU 8302-2015 requirements.</summary>
-    <updated>2025-01-18T16:23:00+00:00</updated>
+    <updated>2025-01-18T16:57:01+00:00</updated>
     <rights>This work is licensed under a Creative Commons Attribution-Share Alike 4.0 License: http://creativecommons.org/licenses/by-sa/4.0/</rights>
   </info>
   <locale>
@@ -94,13 +94,17 @@
     <group delimiter=". ">
       <choose>
         <if variable="DOI">
-          <text variable="DOI" prefix="doi: "/>
+          <text variable="DOI" prefix="DOI: "/>
         </if>
         <else-if variable="URL">
           <text variable="URL"/>
         </else-if>
       </choose>
-      <text variable="accessed-date" prefix="(дата звернення: " suffix=")"/>
+      <date variable="accessed" prefix="(дата звернення: " suffix=")">
+        <date-part name="day" suffix="."/>
+        <date-part name="month" suffix="."/>
+        <date-part name="year" suffix="."/>
+      </date>
     </group>
   </macro>
   <macro name="journal">
